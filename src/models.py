@@ -592,7 +592,7 @@ class UrbanDiT(nn.Module):
         c = t
         
         for block in self.blocks:
-            x = block(x, c, num_frames=None)      , pt=prompt['pt'], ps=prompt['ps'], pf = prompt['pf'], pms=prompt['pms'],pmt=prompt['pmt'])                      # (N, T, D)
+            x = block(x, c, num_frames=None , pt=prompt['pt'], ps=prompt['ps'], pf = prompt['pf'], pms=prompt['pms'],pmt=prompt['pmt'])                      # (N, T, D)
         
         if 'Graph' not in data_name:
             if 'TrafficG' not in data_name:
