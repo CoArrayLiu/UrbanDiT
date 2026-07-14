@@ -1,0 +1,32 @@
+# UrbanDiT reproducible environment for this machine:
+#   OS: Linux/WSL2 (x86_64)
+#   Python: 3.9.25 (managed by the existing Conda environment)
+#   GPU: NVIDIA GeForce RTX 5080 Laptop GPU (Blackwell, sm_120)
+#   NVIDIA driver: 610.47
+#
+# CUDA 12.8 is required here for native Blackwell support. The PyTorch wheels
+# include the CUDA runtime, so a system-wide CUDA toolkit/nvcc is not required.
+--extra-index-url https://download.pytorch.org/whl/cu128
+
+# Core tensor stack (official CUDA 12.8 wheels)
+torch==2.7.1+cu128
+torchvision==0.22.1+cu128
+
+# Model and diffusion stack
+diffusers==0.35.1
+transformers==4.56.2
+accelerate==1.10.1
+safetensors==0.6.2
+timm==1.0.19
+einops==0.8.1
+
+# Graph/data stack
+torch-geometric==2.6.1
+networkx==3.2.1
+pymetis==2023.1.1
+numpy==1.26.4
+
+# Image, progress, and experiment utilities
+pillow==11.3.0
+tqdm==4.67.1
+tensorboard==2.20.0
